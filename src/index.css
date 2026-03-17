@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-riverton-purple: #582C83;
+  --color-riverton-black: #121212;
+  --color-riverton-silver: #A5A9B4;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-riverton-black);
+  color: #ffffff;
+}
