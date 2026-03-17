@@ -324,7 +324,18 @@ The colored portion is not used by runners after the initial play at first base.
 - Ruling: Delayed dead ball. The umpire awards bases to the affected runner(s) based on what would have occurred without the obstruction.`},{title:"Bat Rules: Drafted Division",content:`BBCOR bats are always allowed in younger age divisions.
 Wood bats made from a single piece of solid wood are allowed. Multi-piece wood bats must be examined to verify they are constructed with a solid barrel. Wood bats do not require a BBCOR certification mark or sticker.
 Any bat that has been Withdrawn/Disallowed will no longer be permitted for use on any league or post season game. We will use the list provided by USSSA baseball.`},{title:"Bat Rules: AAA Intact Division",content:`BBCOR bats are always allowed at younger age groups.
-Any bat that has been Withdrawn/Disallowed will no longer be permitted for use on any league or post season game. We will use the list provided by USSSA baseball.`}],Nh=[{title:"T-BALL 3",content:`1. Players must be 3 years old on or before April 30th of the current season.
+Any bat that has been Withdrawn/Disallowed will no longer be permitted for use on any league or post season game. We will use the list provided by USSSA baseball.`},{title:"Player Safety",content:`Riverton Baseball expects all teams to comply with the following important game regulations to ensure safety and fair play.
+
+**Loose Equipment**
+Any loose equipment, such as gloves, bats, helmets or catcher's gear, of either team may not be on or near the field.
+Penalty: If loose equipment interferes with play, the umpire may call an out(s), award bases or return runners, based on the umpire's judgment and the circumstances concerning the play. (NFHS Rule 1-3 Article 7)
+
+Please keep all loose equipment in the dugout area. This includes buckets. If a coach chooses to sit on a bucket, they may do so only inside the dugout. 
+
+**Batter Safety**
+To maintain a safe playing environment, only two batters from the team at bat should be outside the dugout at any time: the current batter and the on-deck batter.
+This rule applies at all times, including between innings. 
+Penalty: the umpire shall warn the offender unless the offense is judged to be major, in which case an ejection shall occur. (NFHS Rule 3-3 Article 1i)`}],Nh=[{title:"T-BALL 3",content:`1. Players must be 3 years old on or before April 30th of the current season.
 2. No score will be kept.
 3. Every kid should wear a helmet when batting.
 4. One kid with a bat in his hands at a time.
