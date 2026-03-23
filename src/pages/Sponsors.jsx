@@ -1,52 +1,260 @@
-import { ExternalLink, Handshake } from 'lucide-react';
-
-const sponsors = [
-  { name: "DICK'S Sporting Goods", url: "https://www.dickssportinggoods.com/", tier: "Platinum" },
-  { name: "Riverton City", url: "#", tier: "Gold" },
-  { name: "Local MVP Sponsor", url: "#", tier: "Silver" },
-  { name: "Community Supporter", url: "#", tier: "Bronze" }
-];
+import { useState } from 'react';
+import { 
+  HeartHandshake, 
+  Crown, 
+  Trophy, 
+  Medal, 
+  Award, 
+  Star,
+  Check,
+  Copy,
+  Mail,
+  Phone
+} from 'lucide-react';
 
 export default function Sponsors() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('amberc@rivertonbaseball.org');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in duration-500">
+    <div className="max-w-5xl mx-auto space-y-12 animate-in fade-in duration-500 pb-12">
+      {/* Header */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-extrabold text-white mb-4">Our Sponsors</h1>
-        <p className="text-riverton-silver text-lg">Thank you to the generous businesses that make Riverton Baseball possible.</p>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-riverton-silver dark:via-white dark:to-riverton-silver transition-all duration-300">
+          Sponsorship Options
+        </h1>
+        <div className="w-24 h-1 bg-riverton-purple mx-auto rounded-full mt-6"></div>
       </div>
 
-      <div className="bg-gradient-to-br from-[#151515] to-[#111] border border-[#2a2a2a] p-8 md:p-12 rounded-3xl text-center mb-12 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-riverton-purple to-transparent"></div>
-        <Handshake className="w-16 h-16 text-riverton-purple mx-auto mb-6" />
-        <h2 className="text-2xl font-bold text-white mb-4">Become a Sponsor Today!</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          Sponsorships are vital to providing uniforms, equipment, and field maintenance for our youth. Partner with us and get your brand in front of thousands of local families.
-        </p>
-        <button className="px-8 py-3 bg-riverton-purple text-white font-bold rounded-full hover:bg-purple-700 transition-colors shadow-lg hover:shadow-purple-500/25">
-          View Sponsorship Options
-        </button>
+      {/* Hero / Intro Section */}
+      <div className="bg-riverton-purple text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-300">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')]"></div>
+        
+        <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
+          <h2 className="text-3xl font-bold font-serif italic mb-6 text-white drop-shadow-md">
+            Dear Community Supporter,
+          </h2>
+          <p className="text-lg leading-relaxed text-purple-50 font-medium">
+            Thank you in advance for your interest in supporting the non-profit Riverton Baseball League.
+          </p>
+          <p className="text-lg leading-relaxed text-purple-50">
+            Support from local businesses, such as yours, has allowed our organization to further provide opportunities to underprivileged children. We look forward to partnering with you as we continue to strive to strengthen the youth in our community.
+          </p>
+        </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6">
-        {sponsors.map((sponsor, idx) => (
-          <a
-            key={idx}
-            href={sponsor.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex flex-col p-6 rounded-2xl bg-[#151515] border border-[#2a2a2a] hover:border-riverton-purple/50 transition-all duration-300"
-          >
-            <div className="flex justify-between items-start mb-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-riverton-purple bg-riverton-purple/10 px-3 py-1 rounded-full">
-                {sponsor.tier} Partner
-              </span>
-              <ExternalLink className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" />
+      {/* Sponsorship Packages Grid */}
+      <div className="space-y-8">
+        
+        {/* Top Tier - Full Width */}
+        <div className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1a1a] dark:to-[#0f0f0f] border-2 border-riverton-purple/30 dark:border-riverton-purple/50 rounded-3xl p-8 relative overflow-hidden group hover:border-riverton-purple transition-all duration-300 shadow-xl">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-riverton-purple/5 dark:bg-riverton-purple/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+          
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10 mb-8 pb-8 border-b border-gray-200 dark:border-[#2a2a2a]">
+            <div className="flex items-center gap-4">
+              <div className="bg-riverton-purple/10 dark:bg-riverton-purple/20 p-4 rounded-2xl">
+                <Crown className="w-10 h-10 text-riverton-purple" />
+              </div>
+              <div>
+                <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white uppercase tracking-wider">Grand Slam</h3>
+                <p className="text-riverton-purple font-bold tracking-widest uppercase text-sm mt-1">Package</p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-white group-hover:text-riverton-purple transition-colors">
-              {sponsor.name}
-            </h3>
-          </a>
-        ))}
+            <div className="bg-gray-900 dark:bg-black text-white px-8 py-3 rounded-full border-r-4 border-riverton-purple text-2xl md:text-3xl font-black shadow-lg">
+              $2500
+            </div>
+          </div>
+          
+          <ul className="grid md:grid-cols-2 gap-y-4 gap-x-8 text-gray-600 dark:text-gray-300 font-medium text-lg">
+            <li className="flex items-start gap-3">
+              <div className="mt-2 w-2 h-2 rounded-full bg-riverton-purple shrink-0"></div>
+              <span>Logo on league's homepage</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="mt-2 w-2 h-2 rounded-full bg-riverton-purple shrink-0"></div>
+              <span>(4) 4x6' banners in location of choice</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="mt-2 w-2 h-2 rounded-full bg-riverton-purple shrink-0"></div>
+              <span>(4) social media posts</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="mt-2 w-2 h-2 rounded-full bg-riverton-purple shrink-0"></div>
+              <span>(4) league emails</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Mid Tiers Grid */}
+        <div className="grid md:grid-cols-2 gap-8 relative">
+          {/* Decorative baseball stitches separator line (visible on md+) */}
+          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-px border-l-2 border-dashed border-[#333] -translate-x-1/2"></div>
+          
+          {/* Home Run */}
+          <div className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300 relative z-10 shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Trophy className="w-8 h-8 text-riverton-purple" />
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-wide">Home Run</h3>
+                  <p className="text-gray-500 dark:text-riverton-silver text-xs font-bold uppercase tracking-widest mt-0.5">Package</p>
+                </div>
+              </div>
+              <div className="bg-gray-900 dark:bg-black text-white px-5 py-2 rounded-full border-r-2 border-riverton-purple text-xl font-bold">
+                $2000
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>Logo on league's website in visible location</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(3) 4x6' banners in location of choice</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(2) social media posts</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(2) league emails</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Triple */}
+          <div className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300 relative z-10 shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Medal className="w-8 h-8 text-riverton-purple" />
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-wide">Triple</h3>
+                  <p className="text-gray-500 dark:text-riverton-silver text-xs font-bold uppercase tracking-widest mt-0.5">Package</p>
+                </div>
+              </div>
+              <div className="bg-gray-900 dark:bg-black text-white px-5 py-2 rounded-full border-r-2 border-riverton-purple text-xl font-bold">
+                $1000
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>Name on league's website</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(2) 4x6' banners in location of choice</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(1) social media mention</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Lower Tiers Grid */}
+        <div className="grid md:grid-cols-2 gap-8 relative mt-8">
+           {/* Decorative baseball stitches separator line (visible on md+) */}
+           <div className="hidden md:block absolute left-1/2 top-0 bottom-4 w-px border-l-2 border-dashed border-[#333] -translate-x-1/2"></div>
+           
+          {/* Double */}
+          <div className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300 z-10 shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Award className="w-8 h-8 text-riverton-purple" />
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-wide">Double</h3>
+                  <p className="text-gray-500 dark:text-riverton-silver text-xs font-bold uppercase tracking-widest mt-0.5">Package</p>
+                </div>
+              </div>
+              <div className="bg-gray-900 dark:bg-black text-white px-5 py-2 rounded-full border-r-2 border-riverton-purple text-xl font-bold">
+                 $500
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>Name on league's website</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>(1) 4x6' banner at the fields</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Single */}
+          <div className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300 z-10 shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Star className="w-8 h-8 text-riverton-purple" />
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-wide">Single</h3>
+                  <p className="text-gray-500 dark:text-riverton-silver text-xs font-bold uppercase tracking-widest mt-0.5">Package</p>
+                </div>
+              </div>
+              <div className="bg-gray-900 dark:bg-black text-white px-5 py-2 rounded-full border-r-2 border-riverton-purple text-xl font-bold">
+                 $250
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span className="leading-snug">Donation goes toward an individual player's registration fee</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-riverton-purple shrink-0"></div>
+                <span>Name on league's website</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer / Contact Section */}
+      <div className="bg-white dark:bg-[#111] border-2 border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 text-center mt-12 relative overflow-hidden shadow-2xl transition-all duration-300">
+        <HeartHandshake className="w-12 h-12 text-riverton-purple mx-auto mb-4 opacity-50" />
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6">Interested in Sponsoring?</h3>
+        
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 text-gray-600 dark:text-gray-300 font-medium bg-gray-50 dark:bg-[#1a1a1a] py-6 px-4 rounded-2xl mb-8 border border-gray-100 dark:border-transparent">
+          <div className="flex items-center gap-2">
+            <Phone className="w-5 h-5 text-riverton-purple" />
+            <span>Amber Christensen <span className="text-gray-900 dark:text-white ml-2 font-bold">801.891.4036</span></span>
+          </div>
+          <div className="hidden lg:block w-px h-8 bg-gray-300 dark:bg-[#333]"></div>
+          
+          <div className="flex items-center gap-2">
+            <Mail className="w-5 h-5 text-riverton-purple mt-0.5" />
+            <button 
+              onClick={handleCopyEmail}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 border ${
+                copied 
+                  ? 'bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/30' 
+                  : 'bg-white dark:bg-riverton-purple/10 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-riverton-purple/20 border-gray-200 dark:border-riverton-purple/30'
+              } shadow-sm`}
+            >
+              <span className="font-semibold tracking-wide">amberc@rivertonbaseball.org</span>
+              {copied ? <Check className="w-4 h-4 ml-1" /> : <Copy className="w-4 h-4 ml-1 opacity-70" />}
+            </button>
+          </div>
+        </div>
+
+        <div className="inline-block bg-riverton-purple text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase shadow-lg">
+          Your generous donations are tax deductible
+        </div>
       </div>
     </div>
   )

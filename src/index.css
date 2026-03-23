@@ -6,12 +6,17 @@
   --color-riverton-silver: #A5A9B4;
 }
 
+@variant dark (&:where(.dark, .dark *));
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--color-riverton-black);
-  color: #ffffff;
+  @apply bg-white dark:bg-riverton-black text-gray-900 dark:text-white transition-colors duration-300;
+}
+
+#root {
+  width: 100%;
 }

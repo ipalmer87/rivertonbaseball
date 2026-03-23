@@ -12,20 +12,20 @@ const BoardMemberCard = ({ member }) => {
   };
 
   return (
-    <div className="bg-[#151515] p-5 rounded-xl border border-[#2a2a2a] flex flex-col justify-between">
+    <div className="bg-white dark:bg-[#151515] p-5 rounded-xl border border-gray-200 dark:border-[#2a2a2a] flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300">
       <div>
-        <h4 className="font-bold text-lg text-white">{member.name}</h4>
-        <p className="text-riverton-purple text-sm font-medium mb-3">{member.role}</p>
+        <h4 className="font-bold text-lg text-gray-900 dark:text-white">{member.name}</h4>
+        <p className="text-riverton-purple text-sm font-semibold mb-3">{member.role}</p>
       </div>
       <button 
         onClick={handleCopy}
-        className="mt-2 flex items-center gap-2 text-xs text-gray-400 hover:text-white transition-colors cursor-pointer text-left group"
+        className="mt-2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer text-left group"
         title="Click to copy email"
       >
         {copied ? (
-          <><CheckCircle2 className="w-3.5 h-3.5 text-green-500" /> <span className="text-green-500 font-medium">Copied to clipboard!</span></>
+          <><CheckCircle2 className="w-3.5 h-3.5 text-green-600 dark:text-green-500" /> <span className="text-green-600 dark:text-green-500 font-bold">Copied!</span></>
         ) : (
-          <><Copy className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100" /> <span className="break-all">{member.email}</span></>
+          <><Copy className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100" /> <span className="break-all font-medium">{member.email}</span></>
         )}
       </button>
     </div>
@@ -34,7 +34,7 @@ const BoardMemberCard = ({ member }) => {
 
 const Board = () => (
   <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-white mb-6">Riverton Baseball Board</h2>
+    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Riverton Baseball Board</h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Sample Board Members Based on the Web View */}
       {[
@@ -74,9 +74,9 @@ const Board = () => (
 );
 
 const Placeholder = ({ title }) => (
-  <div className="bg-[#151515] p-8 rounded-2xl border border-[#2a2a2a] text-center min-h-[400px] flex flex-col justify-center">
-    <h2 className="text-2xl font-bold text-white mb-4">{title}</h2>
-    <p className="text-gray-400">Content for this section is being updated.</p>
+  <div className="bg-white dark:bg-[#151515] p-8 rounded-2xl border border-gray-200 dark:border-[#2a2a2a] text-center min-h-[400px] flex flex-col justify-center shadow-md">
+    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h2>
+    <p className="text-gray-600 dark:text-gray-400">Content for this section is being updated.</p>
   </div>
 );
 
@@ -98,7 +98,7 @@ export default function AboutUs() {
       {/* Sidebar Navigation for About Section */}
       <div className="w-full md:w-64 shrink-0">
         <div className="sticky top-24 space-y-2">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4 px-4">About Us Hub</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4 px-4">About Us Hub</h3>
           {links.map((link) => {
             const isActive = link.exact ? location.pathname === link.path : location.pathname.startsWith(link.path);
             const Icon = link.icon;
@@ -109,11 +109,11 @@ export default function AboutUs() {
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
                   isActive 
                     ? 'bg-riverton-purple text-white shadow-lg' 
-                    : 'text-gray-400 hover:bg-[#1a1a1a] hover:text-white'
+                    : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1a1a1a] hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
                 <Icon className="w-5 h-5" />
-                <span className="font-medium">{link.name}</span>
+                <span className="font-semibold">{link.name}</span>
               </Link>
             )
           })}

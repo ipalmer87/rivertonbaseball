@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Registration from './pages/Registration';
@@ -8,10 +8,12 @@ import Divisions from './pages/Divisions';
 import Sponsors from './pages/Sponsors';
 import AboutUs from './pages/AboutUs';
 import AAACentral from './pages/AAACentral';
+import FAQ from './pages/FAQ';
+import CoachsCorner from './pages/CoachsCorner';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,10 +23,12 @@ function App() {
         <Route path="/divisions" element={<Divisions />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/aaacentral/*" element={<AAACentral />} />
+        <Route path="/coachs-corner" element={<CoachsCorner />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/about/*" element={<AboutUs />} />
       </Routes>
     </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

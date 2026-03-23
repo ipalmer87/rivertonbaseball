@@ -15,17 +15,17 @@ export default function Divisions() {
   return (
     <div className="max-w-5xl mx-auto space-y-8 animate-in fade-in duration-500">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-white mb-4">League Divisions</h1>
-        <p className="text-riverton-silver text-lg max-w-2xl mx-auto">
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">League Divisions</h1>
+        <p className="text-gray-600 dark:text-riverton-silver text-lg max-w-2xl mx-auto">
           From ages 3 to 18, Riverton Baseball offers a progression system designed to safely build skills and foster a love of the game.
         </p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {divisionsList.map((div, idx) => (
-          <div key={idx} className="bg-[#151515] p-6 rounded-2xl border border-[#2a2a2a] hover:border-riverton-purple/50 transition-colors group">
-            <h3 className="text-xl font-bold text-white mb-2">{div.name}</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">{div.desc}</p>
+          <div key={idx} className="bg-white dark:bg-[#151515] p-6 rounded-2xl border border-gray-200 dark:border-[#2a2a2a] shadow-sm hover:shadow-md hover:border-riverton-purple/50 transition-all duration-300 group">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{div.name}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-bold">{div.desc}</p>
           </div>
         ))}
       </div>
