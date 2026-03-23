@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle';
 const navItems = [
   { name: 'Home', path: '/', icon: Home },
   { name: 'Registration', path: '/registration', icon: ClipboardList },
-  { name: 'Tournament', path: '/tournament', icon: Trophy },
+  { name: 'Tournaments', path: '/tournament', icon: Trophy },
   { name: 'Rules', path: '/rules', icon: BookOpen },
   { name: 'Divisions', path: '/divisions', icon: Users },
   { name: 'Sponsors', path: '/sponsors', icon: Handshake },
