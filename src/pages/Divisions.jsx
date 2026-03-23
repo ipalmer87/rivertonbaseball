@@ -66,35 +66,27 @@ export default function Divisions() {
   return (
     <div className="max-w-6xl mx-auto space-y-12 animate-in fade-in duration-500 pb-12">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 italic tracking-tight">League Divisions</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 italic tracking-tight uppercase">League Divisions</h1>
         <div className="w-24 h-1 bg-riverton-purple mx-auto rounded-full mb-6"></div>
         <p className="text-gray-600 dark:text-riverton-silver text-lg max-w-2xl mx-auto leading-relaxed">
           From ages 3 to 18, Riverton Baseball offers a progression system designed to safely build skills and foster a love of the game.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {divisionsList.map((div, idx) => (
-          <div key={idx} className="flex flex-col bg-white dark:bg-gradient-to-br dark:from-[#151515] dark:to-[#111] p-8 rounded-3xl border border-gray-200 dark:border-[#2a2a2a] shadow-sm hover:shadow-xl hover:border-riverton-purple/50 transition-all duration-500 group relative overflow-hidden h-full">
+          <div key={idx} className="flex flex-col bg-white dark:bg-gradient-to-br dark:from-[#151515] dark:to-[#111] p-6 rounded-2xl border border-gray-200 dark:border-[#2a2a2a] shadow-sm hover:shadow-xl hover:border-riverton-purple/50 transition-all duration-500 group relative overflow-hidden h-full">
             <div className="flex-1">
-              <div className="flex justify-between items-start mb-6">
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white leading-none tracking-tight group-hover:text-riverton-purple transition-colors">{div.name}</h3>
-                {div.comp && (
-                  <span className="bg-riverton-purple/10 text-riverton-purple text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest border border-riverton-purple/20">
-                    Competitive
-                  </span>
-                )}
+              <div className="flex justify-between items-center mb-0">
+                <h3 className="text-xl font-black text-gray-900 dark:text-white leading-none tracking-tight group-hover:text-riverton-purple transition-colors">{div.name}</h3>
               </div>
-              <p className="text-sm text-gray-600 dark:text-riverton-silver leading-relaxed font-medium mb-8">
-                {div.desc}
-              </p>
             </div>
 
-            {div.comp ? (
-              <div className="space-y-3 mt-auto">
+            {div.comp && (
+              <div className="space-y-3 mt-6">
                 <button 
                   onClick={() => openSchedule(div)}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 bg-riverton-black dark:bg-riverton-purple text-white rounded-xl font-bold hover:opacity-90 transition-all shadow-lg active:scale-95"
+                  className="w-full flex items-center justify-center gap-2 py-3 bg-riverton-purple text-white rounded-xl font-bold hover:bg-purple-700 transition-all shadow-lg active:scale-95"
                 >
                   <CalendarCheck className="w-4 h-4" />
                   <span>View Schedule</span>
@@ -103,19 +95,12 @@ export default function Divisions() {
                   href={`https://web.gc.com/organizations/${div.gcOrgId}/standings`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 font-bold text-riverton-purple dark:text-purple-400 hover:bg-riverton-purple/5 dark:hover:bg-riverton-purple/10 rounded-xl transition-colors text-sm"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 font-bold text-riverton-purple dark:text-purple-400 hover:bg-riverton-purple/5 dark:hover:bg-riverton-purple/10 rounded-xl transition-colors text-sm"
                 >
                   <Trophy className="w-4 h-4" />
                   <span>Full Standings</span>
                   <ExternalLink className="w-3 h-3 opacity-50" />
                 </a>
-              </div>
-            ) : (
-              <div className="mt-auto pt-6 border-t border-gray-100 dark:border-[#2a2a2a]">
-                <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-bold uppercase tracking-wider">
-                  <Info className="w-3.5 h-3.5" />
-                  Developmental League
-                </div>
               </div>
             )}
           </div>

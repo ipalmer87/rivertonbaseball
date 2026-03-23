@@ -1,4 +1,4 @@
-import { Calendar, Users, Trophy, MapPin, ExternalLink, CalendarDays } from 'lucide-react';
+import { Calendar, Users, Trophy, MapPin, ExternalLink, CalendarDays, FileText, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const specialEvents = [
@@ -13,20 +13,42 @@ const specialEvents = [
   { date: "6/23/2026 - 6/28/2026", title: "All Star Tournament", desc: "Top recreation players are selected and play all stars from other leagues (dates may change)" }
 ];
 
+const sponsors = [
+  { 
+    name: "South Hills Dental Specialists", 
+    logo: "https://www.southhillsdentalspecialists.com/wp-content/themes/charlie-child/images/logo.webp",
+    url: "https://www.southhillsdentalspecialists.com/"
+  },
+  { 
+    name: "Dicks Sporting Goods", 
+    logo: "https://www.goodsports.org/assets/dicks-sporting-goods-logo-298x150.jpg",
+    url: "https://www.dickssportinggoods.com/"
+  },
+  { 
+    name: "Utah Marshall's Baseball", 
+    logo: "https://static.wixstatic.com/media/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_avif,quality_auto/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png",
+    url: "https://www.mgfmarshalls.com/"
+  }
+];
+
 export default function Home() {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-12 transition-colors duration-300">
       {/* Hero Section */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-riverton-purple/10 to-gray-50 dark:from-riverton-purple/20 dark:to-riverton-black border border-gray-200 dark:border-[#2a2a2a] p-8 md:p-12 mb-12 transition-colors duration-300">
-        <div className="absolute top-0 right-0 -mt-16 -mr-16 text-riverton-purple/10">
-        </div>
-        
-        <div className="relative z-10 max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
+      <div 
+        className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-[#2a2a2a] mb-12 transition-colors duration-300 min-h-[400px] flex items-center"
+        style={{ 
+          backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(/rivertonbaseball/images/fields.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="relative z-10 w-full p-8 md:p-12 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg">
             Youth Baseball <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-riverton-purple to-purple-400">Done Right</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-riverton-silver mb-8 leading-relaxed">
+          <p className="text-lg text-gray-100 mb-8 leading-relaxed drop-shadow-md">
             Welcome to Riverton Baseball! We provide a competitive, fun, and safe environment for youth baseball players to develop their skills and love for the game.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -34,8 +56,8 @@ export default function Home() {
               <Users className="w-5 h-5" />
               Register Now
             </Link>
-            <a href="https://www.teamsnap.com/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-full bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-[#333] text-gray-900 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-[#222] transition-colors flex items-center justify-center gap-2">
-              <ExternalLink className="w-5 h-5 text-gray-400 dark:text-riverton-silver" />
+            <a href="https://www.teamsnap.com/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2">
+              <ExternalLink className="w-5 h-5 text-white/70" />
               TeamSnap Login
             </a>
           </div>
@@ -54,9 +76,9 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { title: "Registration", icon: Users, desc: "Join us for the 2026 season", path: "/registration" },
-              { title: "Divisions", icon: Trophy, desc: "Explore age groups & leagues", path: "/divisions" },
+              { title: "Rules", icon: FileText, desc: "League rules & code of conduct", path: "/rules" },
               { title: "Field Locations", icon: MapPin, desc: "Find practice and game fields", path: "/about/fields" },
-              { title: "Calendar", icon: Calendar, desc: "Upcoming events & tryouts", path: "/tournament" }
+              { title: "FAQ", icon: HelpCircle, desc: "Commonly asked questions", path: "/faq" }
             ].map((item, i) => (
               <Link 
                 key={i}
@@ -122,6 +144,30 @@ export default function Home() {
                   Follow on Instagram
                 </a>
               </div>
+            </div>
+          </div>
+
+          {/* Our Sponsors */}
+          <div className="mt-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <span className="w-2 h-8 rounded-full bg-riverton-purple"></span>
+                Our Sponsors
+              </h2>
+              <Link to="/sponsors" className="text-sm font-semibold text-riverton-purple hover:underline">View All</Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {sponsors.map((sponsor, i) => (
+                <a 
+                  key={i}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white dark:bg-[#151515] rounded-2xl border border-gray-200 dark:border-[#2a2a2a] p-4 flex items-center justify-center grayscale hover:grayscale-0 hover:border-riverton-purple/50 transition-all duration-300 group shadow-sm"
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} className="max-h-16 w-auto object-contain group-hover:scale-105 transition-transform" />
+                </a>
+              ))}
             </div>
           </div>
         </div>

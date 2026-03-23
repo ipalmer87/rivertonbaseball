@@ -23,12 +23,70 @@ export default function Sponsors() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-12 animate-in fade-in duration-500 pb-12">
+      {/* Our Valued Sponsors */}
+      <div className="pt-8 space-y-12">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight">
+            Our Valued Sponsors
+          </h2>
+          <div className="w-16 h-1 bg-riverton-purple mx-auto rounded-full mt-4"></div>
+        </div>
+
+        <div className="space-y-8">
+          {[
+            {
+              name: "South Hills Dental Specialists",
+              logo: "https://www.southhillsdentalspecialists.com/wp-content/themes/charlie-child/images/logo.webp",
+              website: "https://www.southhillsdentalspecialists.com/",
+              description: "South Hills Dental Specialists are proud to offer the convenience of pediatric dental care and orthodontic care for children, teens, and adults at our conveniently located office in Riverton, Utah."
+            },
+            {
+              name: "Dicks Sporting Goods",
+              logo: "https://www.goodsports.org/assets/dicks-sporting-goods-logo-298x150.jpg",
+              website: "https://www.dickssportinggoods.com/",
+              description: "At DICK'S Sporting Goods and the DICK’S Sporting Goods Foundation, we believe Sports Matter because participation in sports makes people better. Sports increase confidence and motivate kids to stay in the classroom and aim for higher education. They help build character and teach life lessons that extend well beyond the playing field. That's why we've made it the mission of our Foundation, Community, and Sports Matter programs to give young athletes opportunities to play. DICK'S Sporting Goods Community Program proudly supports leagues, teams, athletes, and outdoor enthusiasts."
+            },
+            {
+              name: "Utah Marshall's Baseball",
+              logo: "https://static.wixstatic.com/media/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_avif,quality_auto/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png",
+              website: "https://www.mgfmarshalls.com/",
+              description: "Riverton Baseball is thrilled to share an exciting partnership between Riverton Baseball and the MGF Marshalls for the upcoming 2026 season. This collaboration opens up amazing opportunities for our community, giving us exceptional access to high-level baseball and fun-filled events."
+            }
+          ].map((sponsor, idx) => (
+            <div key={idx} className="bg-white dark:bg-[#151515] rounded-3xl border border-gray-200 dark:border-[#2a2a2a] p-8 flex flex-col md:flex-row gap-8 items-center md:items-start group hover:border-riverton-purple/30 transition-all duration-300 shadow-sm">
+              <div className="w-48 h-48 shrink-0 flex items-center justify-center bg-gray-50 dark:bg-black/20 rounded-2xl p-6 group-hover:scale-105 transition-transform duration-500">
+                <img src={sponsor.logo} alt={sponsor.name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <div className="flex-1 space-y-4 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-wide">{sponsor.name}</h3>
+                <p className="text-gray-600 dark:text-riverton-silver leading-relaxed">
+                  {sponsor.description}
+                </p>
+                <div className="pt-2">
+                  <a 
+                    href={sponsor.website} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-riverton-purple font-bold hover:gap-3 transition-all"
+                  >
+                    Visit Website
+                    <span className="text-xl">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="h-px bg-gray-200 dark:bg-[#2a2a2a] max-w-2xl mx-auto"></div>
+
       {/* Header */}
-      <div className="text-center mb-10">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-600 via-gray-900 to-gray-600 dark:from-riverton-silver dark:via-white dark:to-riverton-silver transition-all duration-300">
+      <div className="text-center">
+        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight">
           Sponsorship Options
-        </h1>
-        <div className="w-24 h-1 bg-riverton-purple mx-auto rounded-full mt-6"></div>
+        </h2>
+        <div className="w-16 h-1 bg-riverton-purple mx-auto rounded-full mt-4"></div>
       </div>
 
       {/* Hero / Intro Section */}
@@ -256,6 +314,7 @@ export default function Sponsors() {
           Your generous donations are tax deductible
         </div>
       </div>
+
     </div>
   )
 }

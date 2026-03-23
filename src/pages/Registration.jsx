@@ -43,11 +43,11 @@ export default function Registration() {
           <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
             Registration for the 2026 season is FULL, with exception of our 18U age group! Any registrations made will place you on a waitlist with a low probability of being placed on a team, unless we have youth that have previously registered decide to not play.
           </p>
-          <a shrink-0
+          <a 
             href="https://registration.teamsnap.com/form/41531" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-400 transition-colors shadow-md"
+            className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-400 transition-colors shadow-md shrink-0"
           >
             Go to Waitlist Registration
           </a>

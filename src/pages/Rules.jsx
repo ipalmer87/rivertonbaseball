@@ -229,7 +229,7 @@ Ruling: Delayed dead ball. The umpire awards bases to the affected runner(s) bas
       <div className="space-y-8 mt-4">
         {/* Drafted Division */}
         <div>
-          <h3 className="text-xl font-bold text-white mb-4 text-center">Drafted Division</h3>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">Drafted Division</h3>
           <div className="overflow-x-auto border border-gray-200 dark:border-[#2a2a2a] rounded-xl bg-white dark:bg-[#151515] mb-4 shadow-sm">
             <table className="w-full text-center border-collapse whitespace-nowrap">
               <thead>
@@ -316,7 +316,7 @@ Ruling: Delayed dead ball. The umpire awards bases to the affected runner(s) bas
 
 const divisionRules = [
   {
-    title: "T-BALL 3",
+    title: "T-Ball 3",
     content: "1. Players must be 3 years old on or before April 30th of the current season.\n2. No score will be kept.\n3. Every kid should wear a helmet when batting.\n4. One kid with a bat in his hands at a time.\n5. Try to place players in traditional fielding positions.\n6. Every kid on each team hits – no outs are tracked.\n7. A batter will always hit off a tee. If the batter doesn't put the ball in play after 5 swings, have them drop the bat and run to 1st base on their 5th swing.\n8. Try to get in two innings at a minimum."
   },
   {
@@ -328,11 +328,11 @@ const divisionRules = [
     content: "1. Players must be 4 or 5 years old on or before April 30th of the current season.\n2. No score will be kept.\n3. Every kid should wear a helmet when batting.\n4. One kid with a bat in his hands at a time.\n5. Try to place players in traditional fielding positions.\n6. Every kid on each team hits – no outs are tracked.\n7. Coaches pitch to the players from 30-40' away. After 5 unsuccessful swings, the coach should bring out the tee and let the player hit off the tee.\n8. Try to get in two innings at a minimum."
   },
   {
-    title: "ROOKIE 6",
+    title: "Rookie 6",
     content: "1. Players must be 5 or 6 years old on or before April 30th of the current season.\n2. The Riverton Baseball Board shall assign players to their respective teams.\n3. Teams are responsible for keeping score throughout the game and should reconcile any discrepancies as the game progresses.\n4. Standings will determine the seeding in the end of year tournament.\n5. Teams are encouraged to use a coach or a parent to umpire the game.\n6. Games will start as long as each team has a minimum of 7 players. When additional players arrive, they will be added to the end of the batting order.\n7. All players will play the field. The six infield positions will have one player per position. The remaining players will be positioned in the outfield no closer than 15 feet behind the bases.\n8. The pitching machine will be set at approximately 40 feet and at a speed between 30-35 mph.\n9. Each batter will receive a maximum of six pitches. Walks are not permitted. If the batter fails to record a hit within those six pitches, it is recorded as a strikeout. If the sixth pitch results in a foul ball, the batter will receive an additional pitch.\n10. If a ball is hit to the outfield, runners may advance until the ball is returned to the infield.\n11. No stealing bases in any situation including past balls or overthrows.\n12. Limit of 6 runs per half inning.\n13. Every player will have an at-bat each inning.\n14. No new inning after 1 hour 20 minutes.\n15. No more than 5 total coaches on the field at one time: 2 defensive, 1 pitching, 2 base coaches.\n16. Any game that has played 3 full innings or 60 minutes will be considered a complete game."
   },
   {
-    title: "PEEWEE 7-8",
+    title: "PeeWee 7-8",
     content: `**Rosters & Lineups**
 1. Players must be 7 or 8 years old on or before April 30th of the current season. A player may play up one division with league approval.
 2. A player may only be on one Riverton Baseball roster and cannot roster with any other league (including AAA, tournament, or travel teams).
@@ -385,7 +385,7 @@ Coaches are allowed on the field for machine pitch and developmental games ONLY.
 - **Coaching**: Intended for real-time coaching. Coaches should be active on the field prioritizing skill development and fundamental instruction.`
   },
   {
-    title: "MINOR (9-10)",
+    title: "Minor (9-10)",
     content: `1. Players must be 9 or 10 years old on or before April 30th.
 2. Teams are formed through tryouts and draft.
 3. Players may only be on one Riverton Baseball roster.
@@ -403,7 +403,7 @@ Coaches are allowed on the field for machine pitch and developmental games ONLY.
 15. Only bats with USA or USSSA stamp will be allowed.`
   },
   {
-    title: "MAJOR (11-12)",
+    title: "Major (11-12)",
     content: `1. Players must be 11 or 12 years old on or before April 30th.
 2. Teams are formed through tryouts and draft.
 3. Players may only be on one Riverton Baseball roster.
@@ -494,7 +494,7 @@ const RuleAccordion = ({ rule }) => {
     const parts = text.split(/(\*\*.*?\*\*)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i} className="text-white font-bold">{part.slice(2, -2)}</strong>;
+        return <strong key={i} className="text-gray-900 dark:text-white font-bold">{part.slice(2, -2)}</strong>;
       }
       return part;
     });

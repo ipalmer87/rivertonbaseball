@@ -151,6 +151,64 @@ const faqs = [
   {
     question: "Do you offer any kind of employment opportunities?",
     answer: "Short answer: Absolutely!\nWe have the following positions available:\n- Snack Shack & Grill - Please apply online on our Snack Shack page.\n- Umpire - If you are at least 12 years old please email Mitch Wanless, our Umpire in Chief - mitch@rivertonbaseball.org."
+  },
+  {
+    question: "Refund Policy",
+    answer: (
+      <div className="space-y-6">
+        <div className="bg-white dark:bg-[#111] border border-gray-200 dark:border-[#2a2a2a] rounded-2xl p-6 shadow-sm">
+          <h4 className="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-[#2a2a2a] pb-2 uppercase tracking-wide">Recreation Division</h4>
+          <ul className="space-y-3 text-gray-600 dark:text-riverton-silver text-sm">
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Full refund if request is made <span className="text-gray-900 dark:text-white font-bold">before the date of the tryout/draft</span>.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Requests made after the draft, but no later than 1 week following the draft: <span className="text-gray-900 dark:text-white font-bold">50% refund</span>.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span className="text-red-600 dark:text-red-400 font-bold">No refunds will be given after 1 week following the draft.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Appeals can be made to the Elect Board after that date.</span>
+            </li>
+            <li className="flex gap-2 text-xs italic opacity-80">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Refunds do not include credit card processing fees. If RegSaver insurance is purchased, refund requests must go through RegSaver.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-white dark:bg-[#111] border border-gray-200 dark:border-[#2a2a2a] rounded-2xl p-6 shadow-sm">
+          <h4 className="font-bold text-gray-900 dark:text-white mb-4 text-lg border-b border-gray-200 dark:border-[#2a2a2a] pb-2 uppercase tracking-wide">AAA Intact Division</h4>
+          <ul className="space-y-3 text-gray-600 dark:text-riverton-silver text-sm">
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Full refund if request is made <span className="text-gray-900 dark:text-white font-bold">before February 15th</span>.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Requests made after February 15th: <span className="text-gray-900 dark:text-white font-bold">50% refund</span>.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span className="text-red-600 dark:text-red-400 font-bold">No refunds will be given starting March 1st.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Appeals can be made to the Elect Board after that date.</span>
+            </li>
+            <li className="flex gap-2 text-xs italic opacity-80">
+              <span className="text-riverton-purple font-bold">•</span>
+              <span>Refunds do not include credit card processing fees and will be made via check.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    )
   }
 ];
 
