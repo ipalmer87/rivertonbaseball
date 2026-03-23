@@ -28,11 +28,8 @@ export default function Layout({ children }) {
           <img 
             src="/rivertonbaseball/images/RivertonBaseball.png" 
             alt="Riverton Baseball Logo" 
-            className="w-32 h-auto mb-4 hover:scale-105 transition-transform duration-300"
+            className="w-32 h-auto hover:scale-105 transition-transform duration-300"
           />
-          <h1 className="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-riverton-purple to-purple-400">
-            Riverton Baseball
-          </h1>
         </div>
         
         <div className="flex-1 py-6 px-4 space-y-2">
@@ -67,9 +64,13 @@ export default function Layout({ children }) {
         <header className="sticky top-0 z-50 bg-[#f9f9f9]/80 dark:bg-[#1a1a1a]/80 backdrop-blur-md border-b border-gray-200 dark:border-[#2a2a2a] md:hidden transition-colors duration-300">
           {/* Mobile Nav Top Bar */}
           <div className="flex justify-between items-center p-4">
-            <div className="flex items-center space-x-3">
-              <span className="font-bold text-gray-900 dark:text-white">Riverton Baseball</span>
-            </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/rivertonbaseball/images/RivertonBaseball.png" 
+                alt="Logo" 
+                className="h-8 w-auto transition-transform active:scale-95"
+              />
+            </Link>
             <ThemeToggle />
           </div>
         </header>
