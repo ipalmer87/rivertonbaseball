@@ -23,8 +23,8 @@ export default function Layout({ children }) {
   const { theme } = useTheme();
 
   const logoSrc = theme === 'dark' 
-    ? '/rivertonbaseball/images/RivertonBaseballDark.png' 
-    : '/rivertonbaseball/images/RivertonBaseball.png';
+    ? '/images/RivertonBaseballDark.png' 
+    : '/images/RivertonBaseball.png';
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full bg-white dark:bg-riverton-black text-gray-900 dark:text-white selection:bg-riverton-purple selection:text-white transition-colors duration-300">

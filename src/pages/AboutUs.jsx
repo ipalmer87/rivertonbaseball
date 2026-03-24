@@ -84,7 +84,7 @@ const FieldLocations = () => (
   <div className="space-y-8 animate-in slide-in-from-bottom-4 duration-500">
     <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-[#2a2a2a]">
       <img 
-        src="/rivertonbaseball/images/fields.jpg" 
+        src="/images/fields.jpg" 
         alt="Riverton Baseball Fields" 
         className="w-full h-full object-cover"
       />

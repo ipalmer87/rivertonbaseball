@@ -38,7 +38,7 @@ export default function Home() {
       <div 
         className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-[#2a2a2a] mb-12 transition-colors duration-300 min-h-[400px] flex items-center"
         style={{ 
-          backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(/rivertonbaseball/images/fields.jpg)',
+          backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(/images/fields.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
