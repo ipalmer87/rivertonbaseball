@@ -35,22 +35,30 @@ export default function Registration() {
         <p className="text-gray-600 dark:text-riverton-silver text-lg">Join Riverton Baseball for the upcoming 2026 season!</p>
       </div>
 
-      {/* Main Registration Alert */}
-      <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6 flex items-start gap-4 shadow-sm">
-        <AlertCircle className="w-6 h-6 text-yellow-600 dark:text-yellow-500 shrink-0 mt-1" />
-        <div>
-          <h3 className="text-xl font-bold text-yellow-600 dark:text-yellow-500 mb-2">Registration Status update</h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-            Registration for the 2026 season is FULL, with exception of our 18U age group! Any registrations made will place you on a waitlist with a low probability of being placed on a team, unless we have youth that have previously registered decide to not play.
+      {/* Fall Ball Registration Info */}
+      <div className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-xl transition-all duration-300 group hover:border-riverton-purple/30">
+        <div className="bg-riverton-purple/10 dark:bg-riverton-purple/20 p-5 rounded-2xl shrink-0 group-hover:scale-105 transition-transform duration-500">
+          <Users className="w-10 h-10 text-riverton-purple" />
+        </div>
+        <div className="flex-1 space-y-4 text-center md:text-left">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-tight">Fall Ball Registration</h3>
+          <p className="text-gray-700 dark:text-riverton-silver leading-relaxed">
+            Riverton Baseball is proud to partner with Riverton City to offer a recreational Fall Ball league focused on skill-building and fun for players ages 3–8. Registration officially opens on <span className="text-riverton-purple font-bold">April 1, 2026</span>, with a general fee of <span className="font-bold text-gray-900 dark:text-white">$55</span> that includes a full Jr. Bees uniform, hat, and two tickets to a Bees game.
           </p>
-          <a 
-            href="https://registration.teamsnap.com/form/41531" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-400 transition-colors shadow-md shrink-0"
-          >
-            Go to Waitlist Registration
-          </a>
+          <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+            The season runs from August 5 through August 27 at the CR Hamilton Sports Complex, featuring two evening games per week. Parents are encouraged to register early to secure a spot.
+          </p>
+          <div className="pt-2">
+            <a 
+              href="https://www.rivertonutah.gov/recreation/index.php" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-riverton-purple text-white px-8 py-3 rounded-full font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/20"
+            >
+              Riverton City Recreation
+              <CheckCircle2 className="w-5 h-5" />
+            </a>
+          </div>
         </div>
       </div>
 
