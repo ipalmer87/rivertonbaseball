@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 const specialEvents = [
   { date: "1/01/2026", title: "Open Registration", desc: "For Spring Season (Rec League)" },
   { date: "2/28/2026 or 3/07/2026", title: "Tryouts", desc: "Weather depending" },
+  { date: "4/01/2026", title: "Fall Ball Registration (Riverton City)", desc: "For all children ages 7 and under" },
   { date: "4/06/2026", title: "Opening Week", desc: "Opening Week of Games" },
   { date: "4/11/2026", title: "Opening Day", desc: "Official Opening Day Ceremonies" },
   { date: "4/11/2026", title: "Picture Day", desc: "Riverton Baseball Team and Individual picture day" },
   { date: "5/30/2026 - 6/9/2026", title: "Riverton End of Season Tournament", desc: "Divisions: Rookie 6, PeeWee, Minors, Majors (dates may change)" },
-  { date: "6/12/2026 - 6/16/2026", title: "Walk Off Tournament", desc: "Top recreation teams play other leagues (dates may change)" },
+  { date: "6/02/2026", title: "Fall Ball Registration (Riverton Baseball)", desc: "For all children ages 8+" },
   { date: "6/9/2026 - 6/19/2026", title: "AAA End of Season Tournament", desc: "6/9-6/12 & 6/16-6/19. Double Elimination (dates may change)" },
+  { date: "6/12/2026 - 6/16/2026", title: "Walk Off Tournament", desc: "Top recreation teams play other leagues (dates may change)" },
   { date: "6/23/2026 - 6/28/2026", title: "All Star Tournament", desc: "Top recreation players are selected and play all stars from other leagues (dates may change)" }
 ];
 
