@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const faqs = [
   {
@@ -263,9 +264,9 @@ export default function FAQ() {
           If you couldn't find the answer you were looking for, feel free to reach out to us directly or follow us on social media for the latest updates.
         </p>
         <div className="inline-flex gap-4 flex-wrap justify-center">
-          <a href="mailto:pres@rivertonbaseball.org" className="px-6 py-3 rounded-full bg-riverton-purple text-white font-semibold hover:bg-purple-700 transition-colors shadow-lg">
+          <Link to="/about/contact" className="px-6 py-3 rounded-full bg-riverton-purple text-white font-semibold hover:bg-purple-700 transition-colors shadow-lg">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>

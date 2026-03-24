@@ -14,18 +14,18 @@ const specialEvents = [
 ];
 
 const sponsors = [
-  { 
-    name: "South Hills Dental Specialists", 
+  {
+    name: "South Hills Dental Specialists",
     logo: "https://www.southhillsdentalspecialists.com/wp-content/themes/charlie-child/images/logo.webp",
     url: "https://www.southhillsdentalspecialists.com/"
   },
-  { 
-    name: "Dicks Sporting Goods", 
+  {
+    name: "Dicks Sporting Goods",
     logo: "https://www.goodsports.org/assets/dicks-sporting-goods-logo-298x150.jpg",
     url: "https://www.dickssportinggoods.com/"
   },
-  { 
-    name: "Utah Marshall's Baseball", 
+  {
+    name: "Utah Marshall's Baseball",
     logo: "https://static.wixstatic.com/media/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_avif,quality_auto/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png",
     url: "https://www.mgfmarshalls.com/"
   }
@@ -35,9 +35,9 @@ export default function Home() {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-12 transition-colors duration-300">
       {/* Hero Section */}
-      <div 
+      <div
         className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-[#2a2a2a] mb-12 transition-colors duration-300 min-h-[400px] flex items-center"
-        style={{ 
+        style={{
           backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(/images/fields.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
@@ -45,11 +45,11 @@ export default function Home() {
       >
         <div className="relative z-10 w-full p-8 md:p-12 max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg">
-            Youth Baseball <br/>
+            Youth Baseball <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-riverton-purple to-purple-400">Done Right</span>
           </h1>
           <p className="text-lg text-gray-100 mb-8 leading-relaxed drop-shadow-md">
-            Welcome to Riverton Baseball! We provide a competitive, fun, and safe environment for youth baseball players to develop their skills and love for the game.
+            Welcome to Riverton Baseball! We provide a competitive, fun, and safe environment for youth to develop their skills and love for the game.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <Link to="/registration" className="px-6 py-3 rounded-full bg-riverton-purple text-white font-semibold hover:bg-purple-700 transition-colors shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* Two Column Layout for Links and Events */}
       <div className="grid lg:grid-cols-3 gap-8">
-        
+
         {/* Quick Links Grid (Left 2/3) */}
         <div className="lg:col-span-2 space-y-6">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
@@ -80,7 +80,7 @@ export default function Home() {
               { title: "Field Locations", icon: MapPin, desc: "Find practice and game fields", path: "/about/fields" },
               { title: "FAQ", icon: HelpCircle, desc: "Commonly asked questions", path: "/faq" }
             ].map((item, i) => (
-              <Link 
+              <Link
                 key={i}
                 to={item.path}
                 className="group flex flex-col p-6 rounded-2xl bg-white dark:bg-[#151515] border border-gray-200 dark:border-[#2a2a2a] hover:border-riverton-purple/50 dark:hover:border-riverton-purple/50 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md"
@@ -93,7 +93,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          
+
           {/* Announcements */}
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
@@ -118,12 +118,12 @@ export default function Home() {
               <p className="text-gray-600 dark:text-riverton-silver mb-6">
                 For the very latest and most up-to-date information regarding weather delays, field closures, and league announcements, please follow our social media pages!
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="https://www.facebook.com/rivertonbaseballleague" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.facebook.com/rivertonbaseballleague"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 rounded-xl bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] transition-colors flex items-center justify-center gap-3 shadow-lg hover:shadow-[#1877F2]/25"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -131,11 +131,11 @@ export default function Home() {
                   </svg>
                   Follow on Facebook
                 </a>
-                
-                <a 
-                  href="https://www.instagram.com/riverton_baseball/?utm_source=ig_embed&ig_rid=cfc00874-137a-4c07-b392-22e829daf22d" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+
+                <a
+                  href="https://www.instagram.com/riverton_baseball/?utm_source=ig_embed&ig_rid=cfc00874-137a-4c07-b392-22e829daf22d"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 rounded-xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-3 shadow-lg hover:shadow-pink-500/25"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
               {sponsors.map((sponsor, i) => (
-                <a 
+                <a
                   key={i}
                   href={sponsor.url}
                   target="_blank"
@@ -178,16 +178,16 @@ export default function Home() {
             <span className="w-2 h-8 rounded-full bg-riverton-purple"></span>
             Special Dates
           </h2>
-          
+
           <div className="bg-white dark:bg-[#151515] rounded-3xl border border-gray-200 dark:border-[#2a2a2a] overflow-hidden relative shadow-sm">
             <div className="absolute top-0 right-0 w-32 h-32 bg-riverton-purple/5 rounded-bl-full -mr-8 -mt-8"></div>
-            
+
             <div className="p-6 relative z-10 space-y-6">
               <div className="flex items-center gap-3 mb-2">
                 <CalendarDays className="w-6 h-6 text-riverton-purple" />
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider">2026 Season</h3>
               </div>
-              
+
               <div className="space-y-5">
                 {specialEvents.map((event, idx) => (
                   <div key={idx} className="relative pl-6 before:absolute before:left-0 before:top-2 before:bottom-[-20px] before:w-[2px] before:bg-gray-200 dark:before:bg-[#2a2a2a] last:before:hidden">

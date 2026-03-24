@@ -247,6 +247,43 @@ const Umpires = () => (
   </div>
 );
 
+const ContactInfo = () => (
+  <div className="space-y-8 animate-in slide-in-from-bottom-4 duration-500">
+    <div className="bg-white dark:bg-[#151515] p-8 rounded-2xl border border-gray-200 dark:border-[#2a2a2a] shadow-sm">
+      <div className="flex items-center gap-3 mb-6">
+        <Mail className="w-8 h-8 text-riverton-purple" />
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact Us</h2>
+      </div>
+      
+      <p className="text-gray-600 dark:text-riverton-silver text-lg leading-relaxed mb-8">
+        Have a question that wasn't answered in our FAQ? We're here to help! Reach out via email or through our social media channels.
+      </p>
+
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div className="bg-gray-50 dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-[#2a2a2a]">
+          <h3 className="font-bold text-gray-900 dark:text-white mb-2 uppercase tracking-wider text-sm">General Inquiries</h3>
+          <a href="mailto:pres@rivertonbaseball.org" className="text-riverton-purple font-bold text-lg hover:underline block">
+            pres@rivertonbaseball.org
+          </a>
+          <p className="text-xs text-gray-500 mt-2 italic">Expect a response within 24-48 hours during the season.</p>
+        </div>
+        
+        <div className="bg-gray-50 dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-[#2a2a2a]">
+          <h3 className="font-bold text-gray-900 dark:text-white mb-2 uppercase tracking-wider text-sm">Social Media</h3>
+          <div className="flex gap-4">
+            <a href="https://www.facebook.com/rivertonbaseballleague" target="_blank" rel="noopener noreferrer" className="text-riverton-purple hover:scale-110 transition-transform">
+              <span className="font-bold">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/riverton_baseball/" target="_blank" rel="noopener noreferrer" className="text-riverton-purple hover:scale-110 transition-transform">
+              <span className="font-bold">Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export default function AboutUs() {
   const location = useLocation();
 
@@ -290,7 +327,7 @@ export default function AboutUs() {
           <Route path="/" element={<Board />} />
           <Route path="/umpires" element={<Umpires />} />
           <Route path="/fields" element={<FieldLocations />} />
-          <Route path="/contact" element={<Placeholder title="Contact Us" />} />
+          <Route path="/contact" element={<ContactInfo />} />
         </Routes>
       </div>
     </div>
