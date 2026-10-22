@@ -8,6 +8,34 @@ const faqs = [
     answer: "The fastest possible way to learn if there is a rainout is to follow Riverton Baseball on Instagram or Facebook. Coaches will try to inform their team at the earliest convience."
   },
   {
+    question: "Can I install the Riverton Baseball app on my phone?",
+    answer: (
+      <div className="space-y-4">
+        <p className="text-gray-600 dark:text-riverton-silver">
+          Yes! Add this website to your home screen and it opens like an app. There's nothing to download from an app store.
+        </p>
+        <div className="bg-gray-100 dark:bg-[#1a1a1a] p-4 rounded-lg border border-gray-200 dark:border-[#2a2a2a]">
+          <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2 text-lg">
+            <span className="w-2 h-2 rounded-full bg-riverton-purple"></span>
+            iPhone / iPad
+          </h4>
+          <p className="text-sm text-gray-600 dark:text-riverton-silver">
+            Open this site in <strong className="text-gray-900 dark:text-white">Safari</strong>, tap the <strong className="text-gray-900 dark:text-white">Share</strong> button, then tap <strong className="text-gray-900 dark:text-white">Add to Home Screen</strong>.
+          </p>
+        </div>
+        <div className="bg-gray-100 dark:bg-[#1a1a1a] p-4 rounded-lg border border-gray-200 dark:border-[#2a2a2a]">
+          <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2 text-lg">
+            <span className="w-2 h-2 rounded-full bg-riverton-purple"></span>
+            Android
+          </h4>
+          <p className="text-sm text-gray-600 dark:text-riverton-silver">
+            Open this site in <strong className="text-gray-900 dark:text-white">Chrome</strong>, tap the <strong className="text-gray-900 dark:text-white">⋮</strong> menu, then tap <strong className="text-gray-900 dark:text-white">Install app</strong> (or <strong className="text-gray-900 dark:text-white">Add to Home screen</strong>).
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
     question: "Equipment",
     answer: "Bats, gloves, helmets, etc. are not provided by the league. Please let your coach know if you need access to equipment."
   },
