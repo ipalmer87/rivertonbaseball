@@ -8,8 +8,7 @@ import {
   Star,
   Check,
   Copy,
-  Mail,
-  Phone
+  Mail
 } from 'lucide-react';
 
 export default function Sponsors() {
@@ -288,14 +287,9 @@ export default function Sponsors() {
         <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6">Interested in Sponsoring?</h3>
         
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 text-gray-600 dark:text-gray-300 font-medium bg-gray-50 dark:bg-[#1a1a1a] py-6 px-4 rounded-2xl mb-8 border border-gray-100 dark:border-transparent">
-          <div className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-riverton-purple" />
-            <span>Amber Christensen <span className="text-gray-900 dark:text-white ml-2 font-bold">801.891.4036</span></span>
-          </div>
-          <div className="hidden lg:block w-px h-8 bg-gray-300 dark:bg-[#333]"></div>
-          
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-center gap-2">
             <Mail className="w-5 h-5 text-riverton-purple mt-0.5" />
+            <span>Amber Christensen</span>
             <button 
               onClick={handleCopyEmail}
               className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 border ${
