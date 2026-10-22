@@ -36,19 +36,19 @@ export default function Sponsors() {
           {[
             {
               name: "South Hills Dental Specialists",
-              logo: "https://www.southhillsdentalspecialists.com/wp-content/themes/charlie-child/images/logo.webp",
+              logo: "/images/south-hills-dental.webp",
               website: "https://www.southhillsdentalspecialists.com/",
               description: "South Hills Dental Specialists are proud to offer the convenience of pediatric dental care and orthodontic care for children, teens, and adults at our conveniently located office in Riverton, Utah."
             },
             {
               name: "Dicks Sporting Goods",
-              logo: "https://www.goodsports.org/assets/dicks-sporting-goods-logo-298x150.jpg",
+              logo: "/images/dicks-sporting-goods.svg",
               website: "https://www.dickssportinggoods.com/",
               description: "At DICK'S Sporting Goods and the DICK’S Sporting Goods Foundation, we believe Sports Matter because participation in sports makes people better. Sports increase confidence and motivate kids to stay in the classroom and aim for higher education. They help build character and teach life lessons that extend well beyond the playing field. That's why we've made it the mission of our Foundation, Community, and Sports Matter programs to give young athletes opportunities to play. DICK'S Sporting Goods Community Program proudly supports leagues, teams, athletes, and outdoor enthusiasts."
             },
             {
               name: "Utah Marshall's Baseball",
-              logo: "https://static.wixstatic.com/media/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_avif,quality_auto/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png",
+              logo: "/images/mgf-marshalls.png",
               website: "https://www.mgfmarshalls.com/",
               description: "Riverton Baseball is thrilled to share an exciting partnership between Riverton Baseball and the MGF Marshalls for the upcoming 2026 season. This collaboration opens up amazing opportunities for our community, giving us exceptional access to high-level baseball and fun-filled events."
             }

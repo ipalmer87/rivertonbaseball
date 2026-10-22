@@ -18,17 +18,17 @@ const specialEvents = [
 const sponsors = [
   {
     name: "South Hills Dental Specialists",
-    logo: "https://www.southhillsdentalspecialists.com/wp-content/themes/charlie-child/images/logo.webp",
+    logo: "/images/south-hills-dental.webp",
     url: "https://www.southhillsdentalspecialists.com/"
   },
   {
     name: "Dicks Sporting Goods",
-    logo: "https://www.goodsports.org/assets/dicks-sporting-goods-logo-298x150.jpg",
+    logo: "/images/dicks-sporting-goods.svg",
     url: "https://www.dickssportinggoods.com/"
   },
   {
     name: "Utah Marshall's Baseball",
-    logo: "https://static.wixstatic.com/media/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_avif,quality_auto/69e627_e403bbaafffb4d0984681debd3683f73~mv2.png",
+    logo: "/images/mgf-marshalls.png",
     url: "https://www.mgfmarshalls.com/"
   }
 ];

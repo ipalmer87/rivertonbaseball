@@ -179,7 +179,7 @@ export default function Layout({ children }) {
             </div>
             <div className="p-8 text-center border-t border-gray-100 dark:border-[#2a2a2a]">
               <ThemeToggle />
-              <p className="mt-4 text-xs text-gray-400">© 2026 Riverton Baseball</p>
+              <p className="mt-4 text-xs text-gray-400">© {new Date().getFullYear()} Riverton Baseball</p>
             </div>
           </div>
         </div>

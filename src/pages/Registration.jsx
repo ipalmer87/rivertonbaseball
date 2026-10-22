@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { AlertCircle, CalendarClock, Users, CheckCircle2, Calculator } from 'lucide-react';
 
+// Registration for next spring opens over the summer, so July onward targets next year's season
+const today = new Date();
+const SEASON_YEAR = today.getMonth() >= 6 ? today.getFullYear() + 1 : today.getFullYear();
+
 export default function Registration() {
   const [birthDate, setBirthDate] = useState('');
 
@@ -8,9 +12,9 @@ export default function Registration() {
     if (!dateString) return null;
     
     const [year, month, day] = dateString.split('-').map(Number);
-    // League age depends on the player's age on April 30th of the season year (2026)
+    // League age depends on the player's age on April 30th of the season year
     // If born in May or later, they haven't had their birthday by cutoff date
-    const baseballAge = 2026 - year - (month >= 5 ? 1 : 0);
+    const baseballAge = SEASON_YEAR - year - (month >= 5 ? 1 : 0);
 
     if (baseballAge >= 16 && baseballAge <= 18) return { name: "16-18", ageGroup: "16-18" };
     if (baseballAge >= 14 && baseballAge <= 15) return { name: "14-15", ageGroup: "14-15" };
@@ -32,7 +36,7 @@ export default function Registration() {
     <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in duration-500">
       <div className="text-center mb-10 flex flex-col items-center">
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Player Registration</h1>
-        <p className="text-gray-600 dark:text-riverton-silver text-lg">Join Riverton Baseball for the upcoming 2026 season!</p>
+        <p className="text-gray-600 dark:text-riverton-silver text-lg">Join Riverton Baseball for the upcoming {SEASON_YEAR} season!</p>
       </div>
 
       {/* Fall Ball Registration Info */}
@@ -92,7 +96,7 @@ export default function Registration() {
         
         <div className="space-y-6">
           <p className="text-gray-600 dark:text-riverton-silver">
-            Riverton Baseball uses a date cutoff of April 30th to determine your player's league age. Select your child's birthday below to see their recommended division for the Spring 2026 season.
+            Riverton Baseball uses a date cutoff of April 30th to determine your player's league age. Select your child's birthday below to see their recommended division for the Spring {SEASON_YEAR} season.
           </p>
 
           <div className="max-w-sm">
