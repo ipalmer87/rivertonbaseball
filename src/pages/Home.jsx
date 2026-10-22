@@ -146,16 +146,6 @@ export default function Home() {
                   Follow on Instagram
                 </a>
               </div>
-
-              {/* Instagram profile embed: Instagram serves the account's most recent posts */}
-              <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 dark:border-[#2a2a2a] bg-white">
-                <iframe
-                  src="https://www.instagram.com/riverton_baseball/embed/"
-                  title="Riverton Baseball on Instagram"
-                  loading="lazy"
-                  className="w-full h-[480px] sm:h-[620px] lg:h-[700px] border-0"
-                ></iframe>
-              </div>
             </div>
           </div>
 

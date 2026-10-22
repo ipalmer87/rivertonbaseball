@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, ClipboardList, Trophy, BookOpen, Users, MapPin, Handshake, Info, Menu, HelpCircle, GraduationCap } from 'lucide-react';
+import { Home, ClipboardList, Trophy, BookOpen, Users, MapPin, Handshake, Info, Menu, HelpCircle, GraduationCap, Share2 } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../context/ThemeContext';
 
@@ -13,6 +13,7 @@ const navItems = [
   { name: 'Sponsors', path: '/sponsors', icon: Handshake },
   { name: 'AAA Central', path: '/aaacentral', icon: MapPin },
   { name: "Coach's Corner", path: '/coachs-corner', icon: GraduationCap },
+  { name: 'Social Media', path: '/social-media', icon: Share2 },
   { name: 'FAQ', path: '/faq', icon: HelpCircle },
   { name: 'About Us', path: '/about', icon: Info },
 ];

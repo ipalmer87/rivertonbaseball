@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs';
 import AAACentral from './pages/AAACentral';
 import FAQ from './pages/FAQ';
 import CoachsCorner from './pages/CoachsCorner';
+import SocialMedia from './pages/SocialMedia';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/aaacentral/*" element={<AAACentral />} />
         <Route path="/coachs-corner" element={<CoachsCorner />} />
+        <Route path="/social-media" element={<SocialMedia />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about/*" element={<AboutUs />} />
       </Routes>
