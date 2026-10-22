@@ -2,7 +2,7 @@ import { Calendar, Users, Trophy, MapPin, ExternalLink, CalendarDays, FileText, 
 import { Link } from 'react-router-dom';
 
 const specialEvents = [
-  { date: "1/01/2026", title: "Open Registration", desc: "For Spring Season (Rec League)" },
+  { date: "1/1/2027", title: "Open Registration", desc: "For Spring Season (Rec League)" },
   { date: "2/28/2026 or 3/07/2026", title: "Tryouts", desc: "Weather depending" },
   { date: "4/01/2026", title: "Fall Ball Registration (Riverton City)", desc: "For all children ages 7 and under" },
   { date: "4/06/2026", title: "Opening Week", desc: "Opening Week of Games" },
@@ -77,7 +77,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { title: "Registration", icon: Users, desc: "Join us for the 2026 season", path: "/registration" },
+              { title: "Registration", icon: Users, desc: "Join us for the 2027 season", path: "/registration" },
               { title: "Rules", icon: FileText, desc: "League rules & code of conduct", path: "/rules" },
               { title: "Field Locations", icon: MapPin, desc: "Find practice and game fields", path: "/about/fields" },
               { title: "FAQ", icon: HelpCircle, desc: "Commonly asked questions", path: "/faq" }
@@ -145,6 +145,16 @@ export default function Home() {
                   </svg>
                   Follow on Instagram
                 </a>
+              </div>
+
+              {/* Instagram profile embed: Instagram serves the account's most recent posts */}
+              <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 dark:border-[#2a2a2a] bg-white">
+                <iframe
+                  src="https://www.instagram.com/riverton_baseball/embed/"
+                  title="Riverton Baseball on Instagram"
+                  loading="lazy"
+                  className="w-full h-[480px] sm:h-[620px] lg:h-[700px] border-0"
+                ></iframe>
               </div>
             </div>
           </div>
